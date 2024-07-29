@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="auto.css" />
+  </head>
+  <body>
+    <h1>Autojen Rekisteri</h1>
+    <div class="form-container">
+      <form id="autoForm">
+        <label
+          >Rekisterinumero: <input type="text" id="rekisterinumero" required
+        /></label>
+        <label
+          >Valmistaja: <input type="text" id="valmistaja" required
+        /></label>
+        <label>Malli: <input type="text" id="malli" required /></label>
+        <label>Omistaja: <input type="text" id="omistaja" required /></label>
+        <label>Hinta: <input type="number" id="hinta" required /></label>
+        <label>Väri: <input type="text" id="vari" required /></label>
+        <button type="submit">Lisää Auto</button>
+      </form>
+    </div>
+    <div class="table-container">
+      <table id="autoTable" border="1">
+        <thead>
+          <tr>
+            <th>Rekisterinumero</th>
+            <th>Valmistaja</th>
+            <th>Malli</th>
+            <th>Omistaja</th>
+            <th>Hinta</th>
+            <th>Väri</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="search-container">
+      <h2>Hae autoa rekisterinumerolla</h2>
+      <input
+        type="text"
+        id="searchRekisterinumero"
+        placeholder="Syötä rekisterinumero"
+      />
+      <button onclick="etsiAuto()">Hae</button>
+      <div id="searchResult"></div>
+    </div>
+    <script src="./auto.js"></script>
+  </body>
+</html>
